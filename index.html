@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STERNE FM – Gwiezdna Droga</title>
-</head>
-<body>
-  <h1>🌠 STERNE FM</h1>
-  <p>Radio z innej galaktyki</p>
-
-  <!DOCTYPE html>
-<html lang="pl">
-<head>
   <meta charset="UTF-8" />
   <title>STERNE FM – Kokpit Galaktyczny</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -84,10 +73,12 @@
     renderer.setSize(window.innerWidth, window.innerHeight);
     document.body.appendChild(renderer.domElement);
 
+    // Blask słońca
     const sunLight = new THREE.PointLight(0xffcc66, 2, 200);
     sunLight.position.set(0, 0, 50);
     scene.add(sunLight);
 
+    // Gwiazdy w tle
     const starGeo = new THREE.SphereGeometry(0.1, 24, 24);
     const starMat = new THREE.MeshBasicMaterial({ color: 0xffffff });
     for (let i = 0; i < 300; i++) {
@@ -100,6 +91,7 @@
       scene.add(star);
     }
 
+    // Planety i komety
     const loader = new THREE.TextureLoader();
     const objects = [];
 
@@ -141,5 +133,4 @@
   </script>
 </body>
 </html>
-</details>
     
